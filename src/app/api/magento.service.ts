@@ -39,7 +39,7 @@ export class MagentoService {
    * @param filter string
    */
   getCategories(filter: string = null) {
-    const url = `${environment.apiURL}/categories/?${filter}`;
+    const url = `${environment.apiURL}/categories?${filter}`;
     return this.http.get(url, {headers: this.headers});
   }
 

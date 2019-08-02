@@ -10,14 +10,6 @@ import { MagentoService } from '../api/magento.service';
 export class Tab1Page {
 
   constructor(private magento: MagentoService) {
-    this.getSKU('550104');
   }
 
-  getSKU(id: string) {
-    this.magento.getCategories()
-    .pipe().subscribe(data => {
-      // tslint:disable-next-line: no-string-literal
-      console.log(data['children_data']);
-    });
-  }
 }

@@ -1,9 +1,15 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-title>
-      Tab Two
+      Categorias
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let i of categories">
+      <ion-label class="">{{i.name}}</ion-label>
+      <ion-badge slot="end">{{i.product_count}}</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
